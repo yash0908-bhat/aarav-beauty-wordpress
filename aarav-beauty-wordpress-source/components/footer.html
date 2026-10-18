@@ -1,0 +1,987 @@
+<!-- wp:html -->
+<style>
+/* =========================================================
+   AARAV BEAUTY — COMPLETE FOOTER
+   Luxury salon / beauty booking website
+   ========================================================= */
+
+.aarav-footer,
+.aarav-footer * {
+    box-sizing: border-box;
+}
+
+.aarav-footer {
+    --aarav-black: #11100f;
+    --aarav-black-2: #181512;
+    --aarav-black-3: #201b17;
+    --aarav-cream: #f8f3eb;
+    --aarav-gold: #c89b58;
+    --aarav-gold-light: #dfb978;
+    --aarav-rose: #d7a594;
+    --aarav-text: #cec7c0;
+    --aarav-muted: #90877f;
+    --aarav-line: rgba(255,255,255,.10);
+
+    width: 100%;
+    margin: 0 !important;
+    padding: 0 !important;
+
+    background: var(--aarav-black);
+    color: #fff;
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.aarav-footer a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.aarav-footer p,
+.aarav-footer ul {
+    margin-top: 0;
+}
+
+.aarav-footer-wrap {
+    width: min(1320px, calc(100% - 48px));
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   MAIN FOOTER
+   ========================================================= */
+
+.aarav-footer-main {
+    padding: 56px 0 46px;
+
+    background:
+        radial-gradient(circle at 10% 10%, rgba(200,155,88,.08), transparent 28%),
+        linear-gradient(135deg, #100f0e 0%, #181512 58%, #0e0d0c 100%);
+}
+
+.aarav-footer-logo-row {
+    margin-bottom: 28px;
+}
+
+.aarav-footer-logo-row .wp-block-site-logo {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.aarav-footer-logo-row .wp-block-site-logo img {
+    display: block;
+
+    width: 235px !important;
+    max-width: 100% !important;
+    height: auto !important;
+
+    margin: 0 !important;
+
+    object-fit: contain;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+.aarav-footer-grid {
+    display: grid;
+    grid-template-columns: 1.2fr .78fr .9fr 1.05fr;
+    gap: 46px;
+    align-items: start;
+}
+
+
+/* BRAND */
+
+.aarav-footer-about {
+    max-width: 390px;
+    margin-bottom: 20px !important;
+
+    color: var(--aarav-text);
+
+    font-size: 13px;
+    line-height: 1.75;
+}
+
+.aarav-footer-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.aarav-footer-tag {
+    padding: 8px 10px;
+
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+
+    border: 1px solid rgba(200,155,88,.25);
+    border-radius: 4px;
+
+    background: rgba(200,155,88,.055);
+
+    color: #e7ded5;
+
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.aarav-footer-tag svg {
+    width: 14px;
+    height: 14px;
+
+    color: var(--aarav-gold);
+}
+
+
+/* COLUMN HEADINGS */
+
+.aarav-footer-heading {
+    margin: 3px 0 20px;
+
+    color: #fff;
+
+    font-size: 13px;
+    font-weight: 900;
+    letter-spacing: .55px;
+    text-transform: uppercase;
+}
+
+.aarav-footer-heading::after {
+    content: "";
+
+    display: block;
+
+    width: 36px;
+    height: 2px;
+
+    margin-top: 9px;
+
+    background: var(--aarav-gold);
+}
+
+
+/* LINKS */
+
+.aarav-footer-links {
+    margin: 0;
+    padding: 0;
+
+    display: grid;
+    gap: 11px;
+
+    list-style: none;
+}
+
+.aarav-footer-links li {
+    margin: 0;
+    padding: 0;
+}
+
+.aarav-footer-links a {
+    position: relative;
+
+    display: inline-flex;
+    align-items: center;
+
+    color: var(--aarav-text) !important;
+
+    font-size: 12px;
+    line-height: 1.4;
+
+    transition: color .18s ease, transform .18s ease;
+}
+
+.aarav-footer-links a::before {
+    content: "";
+
+    width: 5px;
+    height: 5px;
+
+    margin-right: 9px;
+
+    border-radius: 50%;
+
+    background: rgba(200,155,88,.48);
+
+    transition: background .18s ease;
+}
+
+.aarav-footer-links a:hover {
+    color: #fff !important;
+    transform: translateX(2px);
+}
+
+.aarav-footer-links a:hover::before {
+    background: var(--aarav-gold);
+}
+
+
+/* CONTACT */
+
+.aarav-footer-contact {
+    display: grid;
+    gap: 15px;
+}
+
+.aarav-footer-contact-item {
+    display: grid;
+    grid-template-columns: 36px 1fr;
+    gap: 11px;
+    align-items: start;
+}
+
+.aarav-footer-contact-icon {
+    width: 36px;
+    height: 36px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid rgba(200,155,88,.22);
+    border-radius: 5px;
+
+    background: rgba(200,155,88,.07);
+    color: var(--aarav-gold);
+}
+
+.aarav-footer-contact-icon svg {
+    width: 18px;
+    height: 18px;
+}
+
+.aarav-footer-contact-copy strong {
+    display: block;
+
+    margin-bottom: 3px;
+
+    color: #fff;
+
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: .4px;
+    text-transform: uppercase;
+}
+
+.aarav-footer-contact-copy a,
+.aarav-footer-contact-copy span {
+    color: var(--aarav-text) !important;
+
+    font-size: 12px;
+    line-height: 1.5;
+
+    word-break: break-word;
+}
+
+.aarav-footer-contact-copy a:hover {
+    color: var(--aarav-gold-light) !important;
+}
+
+
+/* BOOKING LINK */
+
+.aarav-footer-book {
+    margin-top: 20px;
+
+    min-height: 44px;
+    padding: 0 18px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    border: 1px solid var(--aarav-gold);
+    border-radius: 4px;
+
+    background: var(--aarav-gold);
+    color: #11100f !important;
+
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: .5px;
+    text-transform: uppercase;
+
+    transition: background .18s ease, transform .18s ease;
+}
+
+.aarav-footer-book:hover {
+    background: var(--aarav-gold-light);
+    transform: translateY(-1px);
+}
+
+.aarav-footer-book svg {
+    width: 15px;
+    height: 15px;
+}
+
+
+/* SOCIAL */
+
+.aarav-footer-social {
+    margin-top: 22px;
+
+    display: flex;
+    align-items: center;
+    gap: 9px;
+}
+
+.aarav-social-link {
+    width: 36px;
+    height: 36px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid var(--aarav-line);
+    border-radius: 50%;
+
+    color: #fff !important;
+
+    transition: border-color .18s ease, color .18s ease, transform .18s ease;
+}
+
+.aarav-social-link:hover {
+    border-color: var(--aarav-gold);
+    color: var(--aarav-gold) !important;
+    transform: translateY(-1px);
+}
+
+.aarav-social-link svg {
+    width: 16px;
+    height: 16px;
+}
+
+
+/* =========================================================
+   SERVICE / TRUST STRIP
+   ========================================================= */
+
+.aarav-footer-strip {
+    border-top: 1px solid var(--aarav-line);
+    border-bottom: 1px solid var(--aarav-line);
+
+    background: #15120f;
+}
+
+.aarav-footer-strip-inner {
+    min-height: 68px;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+}
+
+.aarav-footer-strip-item {
+    min-height: 42px;
+    padding: 0 28px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 11px;
+
+    border-right: 1px solid var(--aarav-line);
+}
+
+.aarav-footer-strip-item:first-child {
+    padding-left: 0;
+}
+
+.aarav-footer-strip-item:last-child {
+    padding-right: 0;
+    border-right: 0;
+}
+
+.aarav-footer-strip-icon {
+    width: 28px;
+    height: 28px;
+    flex: 0 0 28px;
+
+    color: var(--aarav-gold);
+}
+
+.aarav-footer-strip-icon svg {
+    width: 100%;
+    height: 100%;
+}
+
+.aarav-footer-strip-copy strong {
+    display: block;
+
+    margin-bottom: 2px;
+
+    color: #fff;
+
+    font-size: 11px;
+    font-weight: 800;
+}
+
+.aarav-footer-strip-copy span {
+    display: block;
+
+    color: var(--aarav-muted);
+
+    font-size: 9px;
+    line-height: 1.3;
+}
+
+
+/* =========================================================
+   BOTTOM BAR
+   ========================================================= */
+
+.aarav-footer-bottom {
+    background: #0c0b0a;
+}
+
+.aarav-footer-bottom-inner {
+    min-height: 54px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.aarav-footer-copy {
+    margin: 0 !important;
+
+    color: #7f7771;
+
+    font-size: 10px;
+    line-height: 1.4;
+}
+
+.aarav-footer-legal {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 16px;
+}
+
+.aarav-footer-legal a {
+    color: #918981 !important;
+
+    font-size: 10px;
+
+    transition: color .18s ease;
+}
+
+.aarav-footer-legal a:hover {
+    color: var(--aarav-gold-light) !important;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1050px) {
+
+    .aarav-footer-grid {
+        grid-template-columns: 1.1fr 1fr 1fr;
+        gap: 34px;
+    }
+
+    .aarav-footer-contact-column {
+        grid-column: 1 / -1;
+    }
+
+    .aarav-footer-contact {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+}
+
+@media (max-width: 760px) {
+
+    .aarav-footer-wrap {
+        width: calc(100% - 30px);
+    }
+
+    .aarav-footer-main {
+        padding: 42px 0 34px;
+    }
+
+    .aarav-footer-logo-row {
+        margin-bottom: 24px;
+    }
+
+    .aarav-footer-logo-row .wp-block-site-logo img {
+        width: 205px !important;
+    }
+
+    .aarav-footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 32px 24px;
+    }
+
+    .aarav-footer-brand-column,
+    .aarav-footer-contact-column {
+        grid-column: 1 / -1;
+    }
+
+    .aarav-footer-contact {
+        grid-template-columns: 1fr;
+    }
+
+    .aarav-footer-strip-inner {
+        grid-template-columns: 1fr;
+        padding: 9px 0;
+    }
+
+    .aarav-footer-strip-item {
+        padding: 11px 0;
+
+        justify-content: flex-start;
+
+        border-right: 0;
+        border-bottom: 1px solid var(--aarav-line);
+    }
+
+    .aarav-footer-strip-item:last-child {
+        border-bottom: 0;
+    }
+
+    .aarav-footer-bottom-inner {
+        min-height: auto;
+        padding: 16px 0;
+
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .aarav-footer-legal {
+        justify-content: flex-start;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .aarav-footer-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .aarav-footer-brand-column,
+    .aarav-footer-contact-column {
+        grid-column: auto;
+    }
+
+    .aarav-footer-book {
+        width: 100%;
+    }
+
+}
+</style>
+<!-- /wp:html -->
+
+
+<!-- wp:group {"className":"aarav-footer","layout":{"type":"default"}} -->
+<div class="wp-block-group aarav-footer">
+
+
+<!-- MAIN FOOTER -->
+<!-- wp:group {"className":"aarav-footer-main","layout":{"type":"default"}} -->
+<div class="wp-block-group aarav-footer-main">
+
+
+<!-- LOGO -->
+<!-- wp:group {"className":"aarav-footer-wrap aarav-footer-logo-row","layout":{"type":"flex","flexWrap":"nowrap"}} -->
+<div class="wp-block-group aarav-footer-wrap aarav-footer-logo-row">
+<!-- wp:site-logo {"width":235,"shouldSyncIcon":false} /-->
+</div>
+<!-- /wp:group -->
+
+
+<!-- FOOTER GRID -->
+<!-- wp:html -->
+<div class="aarav-footer-wrap aarav-footer-grid">
+
+
+    <!-- BRAND -->
+    <div class="aarav-footer-brand-column">
+
+        <p class="aarav-footer-about">
+            Aarav Beauty is a hair, beauty and wellness destination focused on
+            professional treatments, personal care and a relaxed salon experience.
+            Browse our services and reserve an appointment when it suits you.
+        </p>
+
+
+        <div class="aarav-footer-tags">
+
+
+            <span class="aarav-footer-tag">
+
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                    <path d="M4 20c4-2 6-5 7-9 1-3 4-5 9-7"/>
+                    <path d="M7 17c2 1 4 2 7 2"/>
+                </svg>
+
+                Hair
+
+            </span>
+
+
+            <span class="aarav-footer-tag">
+
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                    <path d="M12 3c-4 3-7 7-7 11a7 7 0 0 0 14 0c0-4-3-8-7-11z"/>
+                </svg>
+
+                Beauty
+
+            </span>
+
+
+            <span class="aarav-footer-tag">
+
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                    <path d="M12 21s-7-4.4-7-10a4 4 0 0 1 7-2.7A4 4 0 0 1 19 11c0 5.6-7 10-7 10z"/>
+                </svg>
+
+                Wellness
+
+            </span>
+
+
+        </div>
+
+
+        <div class="aarav-footer-social">
+
+            <a
+                class="aarav-social-link"
+                href="#"
+                onclick="return false;"
+                title="Instagram coming soon"
+                aria-label="Instagram"
+                aria-disabled="true">
+
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                    <rect x="3" y="3" width="18" height="18" rx="5"/>
+                    <circle cx="12" cy="12" r="4"/>
+                    <circle cx="17.5" cy="6.5" r="1"/>
+                </svg>
+
+            </a>
+
+
+            <a
+                class="aarav-social-link"
+                href="#"
+                onclick="return false;"
+                title="Facebook coming soon"
+                aria-label="Facebook"
+                aria-disabled="true">
+
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M14 8h3V4h-3c-3 0-5 2-5 5v3H6v4h3v8h4v-8h3l1-4h-4V9c0-.7.3-1 1-1z"/>
+                </svg>
+
+            </a>
+
+
+            <a
+                class="aarav-social-link"
+                href="#"
+                onclick="return false;"
+                title="TikTok coming soon"
+                aria-label="TikTok"
+                aria-disabled="true">
+
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M15 3c.4 2.4 1.8 4 4 4.5V11c-1.6 0-3-.5-4-1.3V16a5 5 0 1 1-5-5c.4 0 .7 0 1 .1v3.4a2 2 0 1 0 1 1.7V3h3z"/>
+                </svg>
+
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- QUICK LINKS -->
+    <div>
+
+        <h3 class="aarav-footer-heading">
+            Quick Links
+        </h3>
+
+        <ul class="aarav-footer-links">
+
+            <li><a href="/">Home</a></li>
+
+            <li><a href="/about/">About Us</a></li>
+
+            <li><a href="/services/">Services</a></li>
+
+            <li><a href="/contact/">Contact</a></li>
+
+            <li><a href="/book-appointment/">Book Appointment</a></li>
+
+        </ul>
+
+    </div>
+
+
+    <!-- SERVICES -->
+    <div>
+
+        <h3 class="aarav-footer-heading">
+            Services
+        </h3>
+
+        <ul class="aarav-footer-links">
+
+            <li><a href="/hair/">Hair</a></li>
+
+            <li><a href="/beauty/">Beauty</a></li>
+
+            <li><a href="/services/">Hair Colour</a></li>
+
+            <li><a href="/services/">Styling</a></li>
+
+            <li><a href="/services/">Beauty Treatments</a></li>
+
+            <li><a href="/services/">Wellness</a></li>
+
+        </ul>
+
+    </div>
+
+
+    <!-- CONTACT -->
+    <div class="aarav-footer-contact-column">
+
+        <h3 class="aarav-footer-heading">
+            Get in Touch
+        </h3>
+
+
+        <div class="aarav-footer-contact">
+
+
+            <div class="aarav-footer-contact-item">
+
+                <div class="aarav-footer-contact-icon">
+
+                    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path d="M6.6 10.8c1.6 3.2 3.4 5 6.6 6.6l2.2-2.2c.3-.3.7-.4 1.1-.3 1.2.4 2.5.6 3.8.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.7 21 3 13.3 3 3.7c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.6.6 3.8.1.4 0 .8-.3 1.1l-2.2 2.2z"/>
+                    </svg>
+
+                </div>
+
+                <div class="aarav-footer-contact-copy">
+
+                    <strong>Phone</strong>
+
+                    <a href="tel:+447387349064">
+                        +44 7387 349064
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="aarav-footer-contact-item">
+
+                <div class="aarav-footer-contact-icon">
+
+                    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path d="M2 5h20v14H2V5zm10 7L4 7v10h16V7l-8 5zm0-2 8-5H4l8 5z"/>
+                    </svg>
+
+                </div>
+
+                <div class="aarav-footer-contact-copy">
+
+                    <strong>Email</strong>
+
+                    <a href="mailto:hello@aaravbeauty.co.uk">
+                        hello@aaravbeauty.co.uk
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="aarav-footer-contact-item">
+
+                <div class="aarav-footer-contact-icon">
+
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                        <rect x="4" y="5" width="16" height="15" rx="2"/>
+                        <path d="M8 3v4M16 3v4M4 10h16"/>
+                    </svg>
+
+                </div>
+
+                <div class="aarav-footer-contact-copy">
+
+                    <strong>Appointments</strong>
+
+                    <span>
+                        Book online to view availability
+                    </span>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+        <a href="/book-appointment/" class="aarav-footer-book">
+
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <rect x="3" y="5" width="18" height="16" rx="2"/>
+                <path d="M16 3v4M8 3v4M3 10h18"/>
+            </svg>
+
+            Book Appointment
+
+        </a>
+
+    </div>
+
+
+</div>
+<!-- /wp:html -->
+
+
+</div>
+<!-- /wp:group -->
+
+
+<!-- ======================================================
+     LOWER STRIP
+     ====================================================== -->
+
+<!-- wp:html -->
+<section class="aarav-footer-strip">
+
+    <div class="aarav-footer-wrap aarav-footer-strip-inner">
+
+
+        <div class="aarav-footer-strip-item">
+
+            <div class="aarav-footer-strip-icon">
+
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                    <path d="M4 20c4-2 6-5 7-9 1-3 4-5 9-7"/>
+                    <path d="M7 17c2 1 4 2 7 2"/>
+                </svg>
+
+            </div>
+
+            <div class="aarav-footer-strip-copy">
+
+                <strong>Professional Hair Services</strong>
+
+                <span>
+                    Cut, colour and styling
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="aarav-footer-strip-item">
+
+            <div class="aarav-footer-strip-icon">
+
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                    <path d="M12 3c-4 3-7 7-7 11a7 7 0 0 0 14 0c0-4-3-8-7-11z"/>
+                </svg>
+
+            </div>
+
+            <div class="aarav-footer-strip-copy">
+
+                <strong>Beauty &amp; Wellness</strong>
+
+                <span>
+                    Personalised treatments
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="aarav-footer-strip-item">
+
+            <div class="aarav-footer-strip-icon">
+
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                    <rect x="4" y="5" width="16" height="15" rx="2"/>
+                    <path d="M8 3v4M16 3v4M4 10h16"/>
+                </svg>
+
+            </div>
+
+            <div class="aarav-footer-strip-copy">
+
+                <strong>Simple Online Booking</strong>
+
+                <span>
+                    Reserve your appointment
+                </span>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- ======================================================
+     COPYRIGHT
+     ====================================================== -->
+
+<section class="aarav-footer-bottom">
+
+    <div class="aarav-footer-wrap aarav-footer-bottom-inner">
+
+        <p class="aarav-footer-copy">
+            © 2026 Aarav Beauty. All rights reserved.
+        </p>
+
+
+        <div class="aarav-footer-legal">
+
+            <a href="/privacy-policy/">
+                Privacy Policy
+            </a>
+
+            <a href="/terms-and-conditions/">
+                Terms &amp; Conditions
+            </a>
+
+            <a href="/cancellation-policy/">
+                Cancellation Policy
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- /wp:html -->
+
+
+</div>
+<!-- /wp:group -->

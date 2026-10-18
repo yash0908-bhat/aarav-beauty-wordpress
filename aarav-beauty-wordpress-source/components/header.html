@@ -1,0 +1,209 @@
+<!-- wp:html -->
+<style>
+.aarav-header,.aarav-header *{box-sizing:border-box}
+.aarav-header{
+ --black:#11100f;--black2:#181512;--cream:#f8f3eb;--gold:#c89b58;--gold2:#a97839;
+ width:100%;margin:0!important;padding:0!important;gap:0!important;font-family:Arial,Helvetica,sans-serif
+}
+.aarav-header a{text-decoration:none}
+.aarav-header>*,
+.aarav-header>*+*,
+.aarav-header.is-layout-flow>*+*{margin-top:0!important;margin-bottom:0!important;margin-block-start:0!important;margin-block-end:0!important}
+
+/* TOP BAR */
+.aarav-topbar{width:100%;min-height:34px;background:var(--cream);border-bottom:1px solid #e8ddcf}
+.aarav-topbar-inner{width:min(1360px,calc(100% - 40px));min-height:34px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.aarav-top-left,.aarav-top-right{display:flex;align-items:center;min-width:0}
+.aarav-top-item{min-height:18px;padding:0 15px;display:flex;align-items:center;gap:7px;border-right:1px solid #ddd1c1;color:#6c6259!important;font-size:11px;line-height:1;white-space:nowrap}
+.aarav-top-item:first-child{padding-left:0}
+.aarav-top-left .aarav-top-item:last-child,.aarav-top-right .aarav-top-item:last-child{border-right:0}
+.aarav-top-right .aarav-top-item:last-child{padding-right:0}
+.aarav-top-item strong{color:#2f2a26;font-weight:800}
+.aarav-top-icon{width:15px;height:15px;flex:0 0 15px;color:var(--gold)}
+.aarav-top-icon svg{display:block;width:100%;height:100%}
+
+/* MAIN HEADER */
+.aarav-main{width:100%;background:linear-gradient(90deg,#0e0d0c 0%,#171411 50%,#0e0d0c 100%);border-bottom:1px solid rgba(200,155,88,.28)}
+.aarav-main-inner{position:relative;width:min(1360px,calc(100% - 40px));min-height:94px;margin:0 auto!important;padding:8px 0!important;display:grid!important;grid-template-columns:230px 1fr auto;gap:30px;align-items:center!important}
+
+/* LOGO */
+.aarav-logo-area{min-width:0;margin:0!important;padding:0!important;display:flex!important;align-items:center!important}
+.aarav-logo-area .wp-block-site-logo{margin:0!important;padding:0!important}
+.aarav-logo-area .wp-block-site-logo img{display:block;width:220px!important;max-width:100%!important;height:auto!important;margin:0!important;object-fit:contain}
+
+/* NAV */
+.aarav-nav-wrap{min-width:0;display:flex;align-items:center;justify-content:center}
+.aarav-mobile-toggle,.aarav-mobile-menu-button{display:none}
+.aarav-menu{margin:0!important;padding:0!important;display:flex;align-items:center;justify-content:center;gap:2px;list-style:none}
+.aarav-menu li{margin:0;padding:0}
+.aarav-menu a{position:relative;min-height:46px;padding:0 13px;display:flex;align-items:center;gap:6px;color:rgba(255,255,255,.86)!important;font-size:12px;font-weight:700;letter-spacing:.25px;white-space:nowrap;transition:color .18s ease}
+.aarav-menu a:after{content:"";position:absolute;left:13px;right:13px;bottom:7px;height:1px;background:var(--gold);transform:scaleX(0);transform-origin:center;transition:transform .18s ease}
+.aarav-menu a:hover{color:#fff!important}
+.aarav-menu a:hover:after{transform:scaleX(1)}
+.home .aarav-home-link{color:var(--gold)!important}
+.aarav-chevron{width:9px;height:9px;flex:0 0 9px}
+.aarav-chevron svg{display:block;width:100%;height:100%}
+
+/* BOOK BUTTON */
+.aarav-actions{display:flex;align-items:center;justify-content:flex-end}
+.aarav-book-btn{min-height:46px;padding:0 19px;display:inline-flex;align-items:center;justify-content:center;gap:8px;border:1px solid var(--gold);border-radius:3px;background:var(--gold);color:#11100f!important;font-size:11px;font-weight:900;letter-spacing:.55px;text-transform:uppercase;transition:background .18s ease,transform .18s ease}
+.aarav-book-btn:hover{background:#ddb673;border-color:#ddb673;transform:translateY(-1px)}
+.aarav-book-btn svg{width:16px;height:16px}
+
+/* SERVICE STRIP */
+.aarav-strip{width:100%;background:#fff;border-bottom:1px solid #ece7e1}
+.aarav-strip-inner{width:min(1360px,calc(100% - 40px));min-height:54px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);align-items:center}
+.aarav-strip-item{min-height:32px;padding:0 22px;display:flex;align-items:center;justify-content:center;gap:10px;border-right:1px solid #ece7e1}
+.aarav-strip-item:first-child{padding-left:0}.aarav-strip-item:last-child{padding-right:0;border-right:0}
+.aarav-strip-icon{width:23px;height:23px;flex:0 0 23px;color:var(--gold)}
+.aarav-strip-icon svg{display:block;width:100%;height:100%}
+.aarav-strip-copy strong{display:block;margin-bottom:1px;color:#2f2a26;font-size:11px;font-weight:800}
+.aarav-strip-copy span{display:block;color:#7b736c;font-size:9px;line-height:1.25}
+
+/* TABLET */
+@media(max-width:1180px){
+ .aarav-main-inner{grid-template-columns:195px 1fr auto;gap:18px}
+ .aarav-logo-area .wp-block-site-logo img{width:175px!important}
+ .aarav-menu a{padding-left:9px;padding-right:9px;font-size:11px}
+}
+
+/* MOBILE */
+@media(max-width:940px){
+ .aarav-top-right{display:none}
+ .aarav-topbar-inner{justify-content:center}
+ .aarav-top-left .aarav-top-item:not(:first-child){display:none}
+ .aarav-top-left .aarav-top-item:first-child{padding:0;border:0}
+ .aarav-main-inner{width:calc(100% - 30px);min-height:74px;grid-template-columns:44px minmax(130px,1fr) auto;gap:10px}
+ .aarav-nav-wrap{grid-column:1;grid-row:1;justify-content:flex-start}
+ .aarav-logo-area{grid-column:2;grid-row:1;justify-content:center}
+ .aarav-logo-area .wp-block-site-logo img{width:150px!important}
+ .aarav-actions{grid-column:3;grid-row:1}
+ .aarav-mobile-menu-button{width:42px;height:42px;display:flex;align-items:center;justify-content:center;color:#fff;cursor:pointer;user-select:none}
+ .aarav-mobile-menu-button svg{width:25px;height:25px}
+ .aarav-menu{position:absolute;top:74px;left:0;right:0;z-index:99999;width:100%;display:none;flex-direction:column;align-items:stretch;gap:0;background:#12100f;box-shadow:0 14px 30px rgba(0,0,0,.25)}
+ .aarav-menu li{width:100%}
+ .aarav-menu a{width:100%;min-height:49px;padding:0 18px;justify-content:flex-start;border-bottom:1px solid rgba(255,255,255,.08);font-size:13px}
+ .aarav-menu a:after{display:none}
+ .aarav-menu a .aarav-chevron{margin-left:auto}
+ .aarav-mobile-toggle:checked~.aarav-menu{display:flex}
+ .aarav-book-btn{min-height:40px;padding:0 12px;font-size:9px}
+ .aarav-book-btn svg{display:none}
+ .aarav-strip-inner{width:calc(100% - 24px);grid-template-columns:1fr 1fr;padding:6px 0}
+ .aarav-strip-item{padding:8px 10px;justify-content:flex-start;border-right:0}
+}
+@media(max-width:520px){
+ .aarav-logo-area .wp-block-site-logo img{width:128px!important}
+ .aarav-book-btn{min-height:38px;padding:0 9px;font-size:8px}
+ .aarav-strip-copy strong{font-size:10px}.aarav-strip-copy span{font-size:8px}
+}
+@media(max-width:385px){
+ .aarav-main-inner{grid-template-columns:40px minmax(105px,1fr) auto}
+ .aarav-logo-area .wp-block-site-logo img{width:112px!important}
+ .aarav-book-btn{padding:0 7px;font-size:7.5px}
+}
+</style>
+<!-- /wp:html -->
+
+<!-- wp:group {"className":"aarav-header","layout":{"type":"default"}} -->
+<div class="wp-block-group aarav-header">
+
+<!-- wp:html -->
+<div class="aarav-topbar">
+ <div class="aarav-topbar-inner">
+  <div class="aarav-top-left">
+   <div class="aarav-top-item">
+    <span class="aarav-top-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 9.5 9H2l6 4.3L5.8 21 12 16.5 18.2 21 16 13.3 22 9h-7.5L12 2z"/></svg></span>
+    <span><strong>Hair • Beauty • Wellness</strong></span>
+   </div>
+   <div class="aarav-top-item">
+    <span class="aarav-top-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>
+    <span>Appointments Available</span>
+   </div>
+  </div>
+  <div class="aarav-top-right">
+   <a class="aarav-top-item" href="tel:+447387349064">
+    <span class="aarav-top-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8c1.6 3.2 3.4 5 6.6 6.6l2.2-2.2c.3-.3.7-.4 1.1-.3 1.2.4 2.5.6 3.8.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.7 21 3 13.3 3 3.7c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.6.6 3.8.1.4 0 .8-.3 1.1l-2.2 2.2z"/></svg></span>
+    <strong>+44 7387 349064</strong>
+   </a>
+   <a class="aarav-top-item" href="mailto:hello@aaravbeauty.co.uk">
+    <span class="aarav-top-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M2 5h20v14H2V5zm10 7L4 7v10h16V7l-8 5zm0-2 8-5H4l8 5z"/></svg></span>
+    <strong>hello@aaravbeauty.co.uk</strong>
+   </a>
+  </div>
+ </div>
+</div>
+<!-- /wp:html -->
+
+<!-- wp:group {"className":"aarav-main","layout":{"type":"default"}} -->
+<div class="wp-block-group aarav-main">
+<!-- wp:group {"className":"aarav-main-inner","layout":{"type":"default"}} -->
+<div class="wp-block-group aarav-main-inner">
+
+<!-- wp:group {"className":"aarav-logo-area","layout":{"type":"flex","flexWrap":"nowrap"}} -->
+<div class="wp-block-group aarav-logo-area">
+<!-- wp:site-logo {"width":205,"shouldSyncIcon":true} /-->
+</div>
+<!-- /wp:group -->
+
+<!-- wp:html -->
+<div class="aarav-nav-wrap">
+ <input type="checkbox" id="aarav-mobile-toggle" class="aarav-mobile-toggle" aria-hidden="true">
+ <label for="aarav-mobile-toggle" class="aarav-mobile-menu-button" aria-label="Open navigation menu">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16"/><path d="M4 12h16"/><path d="M4 18h16"/></svg>
+ </label>
+
+ <ul class="aarav-menu">
+  <li><a class="aarav-home-link" href="/">Home</a></li>
+  <li><a href="/services/">Services <span class="aarav-chevron"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2.5 4.5 6 8l3.5-3.5"/></svg></span></a></li>
+  <li><a href="/hair/">Hair</a></li>
+  <li><a href="/beauty/">Beauty</a></li>
+  <li><a href="/about/">About Us</a></li>
+  <li><a href="/contact/">Contact</a></li>
+ </ul>
+</div>
+<!-- /wp:html -->
+
+<!-- wp:html -->
+<div class="aarav-actions">
+ <a href="/book-appointment/" class="aarav-book-btn">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 10h18"/></svg>
+  Book Appointment
+ </a>
+</div>
+<!-- /wp:html -->
+
+</div>
+<!-- /wp:group -->
+</div>
+<!-- /wp:group -->
+
+<!-- wp:html -->
+<div class="aarav-strip">
+ <div class="aarav-strip-inner">
+
+  <div class="aarav-strip-item">
+   <div class="aarav-strip-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 20c4-2 6-5 7-9 1-3 4-5 9-7"/><path d="M7 17c2 1 4 2 7 2"/></svg></div>
+   <div class="aarav-strip-copy"><strong>Hair Services</strong><span>Cut, colour &amp; styling</span></div>
+  </div>
+
+  <div class="aarav-strip-item">
+   <div class="aarav-strip-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3c-4 3-7 7-7 11a7 7 0 0 0 14 0c0-4-3-8-7-11z"/></svg></div>
+   <div class="aarav-strip-copy"><strong>Beauty Treatments</strong><span>Personalised care</span></div>
+  </div>
+
+  <div class="aarav-strip-item">
+   <div class="aarav-strip-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-7-4.4-7-10a4 4 0 0 1 7-2.7A4 4 0 0 1 19 11c0 5.6-7 10-7 10z"/></svg></div>
+   <div class="aarav-strip-copy"><strong>Relax &amp; Refresh</strong><span>Beauty &amp; wellness</span></div>
+  </div>
+
+  <div class="aarav-strip-item">
+   <div class="aarav-strip-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M8 3v4M16 3v4M4 10h16"/></svg></div>
+   <div class="aarav-strip-copy"><strong>Easy Booking</strong><span>Reserve your appointment</span></div>
+  </div>
+
+ </div>
+</div>
+<!-- /wp:html -->
+
+</div>
+<!-- /wp:group -->

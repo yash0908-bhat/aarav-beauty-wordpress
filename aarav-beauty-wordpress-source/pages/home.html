@@ -1,0 +1,1826 @@
+<!-- wp:html -->
+<style>
+/* =========================================================
+   AARAV BEAUTY — EDITORIAL LUXURY HOMEPAGE
+   Distinct from the Auto Parts site:
+   asymmetric layouts, soft editorial palette, overlapping
+   cards, serif typography, beauty-focused storytelling.
+   ========================================================= */
+
+.aarav-home,
+.aarav-home * {
+    box-sizing: border-box;
+}
+
+.aarav-home {
+    --ink: #171311;
+    --ink-soft: #2a2421;
+    --cream: #f8f2eb;
+    --cream-2: #f2e7dc;
+    --rose: #d8b3a6;
+    --rose-deep: #b98576;
+    --gold: #c89b58;
+    --gold-light: #e1c18b;
+    --paper: #fffdf9;
+    --muted: #756a63;
+    --line: #e7dbcf;
+    --white: #ffffff;
+
+    width: 100vw;
+    max-width: 100vw;
+    margin-left: calc(50% - 50vw) !important;
+    overflow-x: hidden;
+
+    background: var(--paper);
+    color: var(--ink);
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.aarav-home h1,
+.aarav-home h2,
+.aarav-home h3,
+.aarav-home p,
+.aarav-home figure {
+    margin-top: 0;
+}
+
+.aarav-home img {
+    display: block;
+    width: 100%;
+}
+
+.aarav-home a {
+    text-decoration: none;
+}
+
+.aarav-wrap {
+    width: min(1320px, calc(100% - 48px));
+    margin: 0 auto;
+}
+
+.aarav-serif {
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+.aarav-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    margin-bottom: 16px;
+
+    color: var(--rose-deep);
+
+    font-size: 11px;
+    font-weight: 900;
+    letter-spacing: 1.7px;
+    text-transform: uppercase;
+}
+
+.aarav-eyebrow::before {
+    content: "";
+    width: 34px;
+    height: 1px;
+    background: var(--gold);
+}
+
+.aarav-section-title {
+    margin-bottom: 14px;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(34px, 4vw, 54px);
+    line-height: 1.02;
+    letter-spacing: -1px;
+    font-weight: 500;
+}
+
+.aarav-section-copy {
+    max-width: 720px;
+    margin-bottom: 0;
+
+    color: var(--muted);
+
+    font-size: 15px;
+    line-height: 1.75;
+}
+
+.aarav-button {
+    min-height: 49px;
+    padding: 0 23px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    border: 1px solid transparent;
+    border-radius: 999px;
+
+    font-size: 11px;
+    font-weight: 900;
+    letter-spacing: .55px;
+    text-transform: uppercase;
+
+    transition: all .2s ease;
+}
+
+.aarav-button:hover {
+    transform: translateY(-1px);
+}
+
+.aarav-button-dark {
+    background: var(--ink);
+    color: #fff !important;
+}
+
+.aarav-button-dark:hover {
+    background: #000;
+}
+
+.aarav-button-rose {
+    background: var(--rose);
+    color: var(--ink) !important;
+}
+
+.aarav-button-rose:hover {
+    background: #e4c4ba;
+}
+
+.aarav-button-outline {
+    border-color: var(--ink);
+    color: var(--ink) !important;
+    background: transparent;
+}
+
+.aarav-button-outline:hover {
+    background: var(--ink);
+    color: #fff !important;
+}
+
+
+/* =========================================================
+   1. EDITORIAL HERO
+   ========================================================= */
+
+.aarav-hero {
+    position: relative;
+    overflow: hidden;
+
+    background:
+        radial-gradient(circle at 16% 15%, rgba(216,179,166,.22), transparent 28%),
+        linear-gradient(110deg, #fbf7f2 0%, #f6eee6 58%, #efe1d5 100%);
+}
+
+.aarav-hero-inner {
+    min-height: 720px;
+    padding: 72px 0 58px;
+
+    display: grid;
+    grid-template-columns: .92fr 1.08fr;
+    gap: 58px;
+    align-items: center;
+}
+
+.aarav-hero-copy {
+    max-width: 620px;
+}
+
+.aarav-hero-mark {
+    margin-bottom: 22px;
+
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    color: var(--gold);
+
+    font-size: 11px;
+    font-weight: 900;
+    letter-spacing: 1.6px;
+    text-transform: uppercase;
+}
+
+.aarav-hero-mark span {
+    width: 38px;
+    height: 1px;
+    background: var(--gold);
+}
+
+.aarav-hero h1 {
+    margin-bottom: 22px;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(56px, 7vw, 94px);
+    line-height: .94;
+    letter-spacing: -2.6px;
+    font-weight: 500;
+}
+
+.aarav-hero h1 em {
+    color: var(--rose-deep);
+    font-style: italic;
+    font-weight: 400;
+}
+
+.aarav-hero-lead {
+    max-width: 560px;
+    margin-bottom: 30px;
+
+    color: #625850;
+
+    font-size: 16px;
+    line-height: 1.78;
+}
+
+.aarav-hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.aarav-hero-note {
+    margin-top: 30px;
+
+    display: flex;
+    align-items: center;
+    gap: 11px;
+
+    color: #7b7068;
+
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+.aarav-hero-note-icon {
+    width: 32px;
+    height: 32px;
+    flex: 0 0 32px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid #dcc7b7;
+    border-radius: 50%;
+
+    color: var(--gold);
+}
+
+.aarav-hero-note-icon svg {
+    width: 16px;
+    height: 16px;
+}
+
+
+/* HERO IMAGE COMPOSITION */
+
+.aarav-hero-visual {
+    position: relative;
+    min-height: 610px;
+}
+
+.aarav-hero-main-image {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    width: 76%;
+    height: 570px;
+
+    overflow: hidden;
+
+    border-radius: 180px 180px 18px 18px;
+}
+
+.aarav-hero-main-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.aarav-hero-small-image {
+    position: absolute;
+    left: 0;
+    bottom: 8px;
+    z-index: 2;
+
+    width: 39%;
+    height: 270px;
+
+    overflow: hidden;
+
+    border: 8px solid var(--paper);
+    border-radius: 120px 120px 12px 12px;
+
+    box-shadow: 0 16px 38px rgba(57,40,30,.14);
+}
+
+.aarav-hero-small-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.aarav-floating-book {
+    position: absolute;
+    right: 2%;
+    bottom: 0;
+    z-index: 3;
+
+    width: 280px;
+    padding: 20px 21px;
+
+    border: 1px solid rgba(200,155,88,.35);
+    border-radius: 14px;
+
+    background: rgba(255,253,249,.95);
+    backdrop-filter: blur(10px);
+
+    box-shadow: 0 14px 34px rgba(61,42,29,.12);
+}
+
+.aarav-floating-book strong {
+    display: block;
+    margin-bottom: 6px;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.aarav-floating-book span {
+    display: block;
+    margin-bottom: 15px;
+
+    color: var(--muted);
+
+    font-size: 10px;
+    line-height: 1.5;
+}
+
+.aarav-floating-book a {
+    color: var(--rose-deep) !important;
+
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: .5px;
+    text-transform: uppercase;
+}
+
+
+/* =========================================================
+   2. BEAUTY MARQUEE
+   ========================================================= */
+
+.aarav-marquee {
+    overflow: hidden;
+
+    border-top: 1px solid #eadfd4;
+    border-bottom: 1px solid #eadfd4;
+
+    background: #fffaf5;
+}
+
+.aarav-marquee-track {
+    min-height: 54px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 34px;
+
+    white-space: nowrap;
+}
+
+.aarav-marquee-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+
+    color: #6d625a;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 15px;
+    font-style: italic;
+}
+
+.aarav-marquee-dot {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--gold);
+}
+
+
+/* =========================================================
+   3. ASYMMETRIC SERVICE EDIT
+   ========================================================= */
+
+.aarav-edit {
+    padding: 92px 0;
+
+    background: var(--paper);
+}
+
+.aarav-edit-head {
+    max-width: 760px;
+    margin-bottom: 38px;
+}
+
+.aarav-edit-grid {
+    display: grid;
+    grid-template-columns: 1.25fr .75fr;
+    gap: 18px;
+}
+
+.aarav-edit-column {
+    display: grid;
+    gap: 18px;
+}
+
+.aarav-edit-card {
+    position: relative;
+    overflow: hidden;
+
+    border-radius: 14px;
+
+    background: #ddd;
+}
+
+.aarav-edit-card-large {
+    min-height: 610px;
+}
+
+.aarav-edit-card-small {
+    min-height: 296px;
+}
+
+.aarav-edit-card img {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    transition: transform .35s ease;
+}
+
+.aarav-edit-card:hover img {
+    transform: scale(1.035);
+}
+
+.aarav-edit-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(180deg, transparent 30%, rgba(17,16,15,.76) 100%);
+}
+
+.aarav-edit-card-body {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+
+    padding: 26px;
+}
+
+.aarav-edit-card h3 {
+    margin-bottom: 7px;
+
+    color: #fff;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.aarav-edit-card p {
+    max-width: 430px;
+    margin-bottom: 14px;
+
+    color: rgba(255,255,255,.72);
+
+    font-size: 11px;
+    line-height: 1.6;
+}
+
+.aarav-edit-card a {
+    color: var(--gold-light) !important;
+
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: .55px;
+    text-transform: uppercase;
+}
+
+
+/* =========================================================
+   4. THE AARAV RITUAL
+   ========================================================= */
+
+.aarav-ritual {
+    padding: 90px 0;
+
+    background:
+        linear-gradient(180deg, #181411 0%, #211a16 100%);
+    color: #fff;
+}
+
+.aarav-ritual-head {
+    max-width: 760px;
+    margin-bottom: 36px;
+}
+
+.aarav-ritual .aarav-section-title {
+    color: #fff;
+}
+
+.aarav-ritual .aarav-section-copy {
+    color: rgba(255,255,255,.64);
+}
+
+.aarav-ritual-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+
+    background: rgba(255,255,255,.10);
+}
+
+.aarav-ritual-card {
+    padding: 34px 30px;
+
+    background: #1b1714;
+}
+
+.aarav-ritual-number {
+    margin-bottom: 28px;
+
+    color: var(--gold);
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 44px;
+    line-height: 1;
+}
+
+.aarav-ritual-card h3 {
+    margin-bottom: 10px;
+
+    color: #fff;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 23px;
+    font-weight: 500;
+}
+
+.aarav-ritual-card p {
+    margin-bottom: 0;
+
+    color: rgba(255,255,255,.62);
+
+    font-size: 11px;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   5. EXPECTATION / BRAND STATEMENT
+   ========================================================= */
+
+.aarav-expect {
+    padding: 96px 0;
+
+    background: #fbf7f2;
+}
+
+.aarav-expect-grid {
+    display: grid;
+    grid-template-columns: .82fr 1.18fr;
+    gap: 70px;
+    align-items: center;
+}
+
+.aarav-expect-quote {
+    padding: 38px;
+
+    border-left: 1px solid var(--gold);
+}
+
+.aarav-expect-quote p {
+    margin-bottom: 18px;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(28px, 3vw, 41px);
+    line-height: 1.2;
+    color: var(--ink);
+}
+
+.aarav-expect-quote span {
+    color: var(--rose-deep);
+
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+}
+
+.aarav-expect-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.aarav-expect-item {
+    padding: 22px;
+
+    border: 1px solid var(--line);
+    border-radius: 10px;
+
+    background: #fff;
+}
+
+.aarav-expect-icon {
+    width: 39px;
+    height: 39px;
+    margin-bottom: 14px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #f7eee6;
+    color: var(--gold);
+}
+
+.aarav-expect-icon svg {
+    width: 19px;
+    height: 19px;
+}
+
+.aarav-expect-item strong {
+    display: block;
+    margin-bottom: 6px;
+
+    font-size: 13px;
+    color: var(--ink);
+}
+
+.aarav-expect-item p {
+    margin-bottom: 0;
+
+    color: var(--muted);
+
+    font-size: 10.5px;
+    line-height: 1.55;
+}
+
+
+/* =========================================================
+   6. TREATMENT SELECTOR
+   ========================================================= */
+
+.aarav-selector {
+    padding: 92px 0;
+
+    background: #fff;
+}
+
+.aarav-selector-head {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 30px;
+
+    margin-bottom: 34px;
+}
+
+.aarav-selector-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+}
+
+.aarav-selector-card {
+    padding: 23px 20px;
+
+    border: 1px solid var(--line);
+    border-radius: 12px;
+
+    background: #fff;
+
+    transition: all .2s ease;
+}
+
+.aarav-selector-card:hover {
+    transform: translateY(-3px);
+    border-color: #d7c0ac;
+    box-shadow: 0 10px 24px rgba(60,39,25,.06);
+}
+
+.aarav-selector-card small {
+    display: block;
+    margin-bottom: 12px;
+
+    color: var(--rose-deep);
+
+    font-size: 9px;
+    font-weight: 900;
+    letter-spacing: 1.1px;
+    text-transform: uppercase;
+}
+
+.aarav-selector-card h3 {
+    margin-bottom: 8px;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.aarav-selector-card p {
+    margin-bottom: 15px;
+
+    color: var(--muted);
+
+    font-size: 10.5px;
+    line-height: 1.55;
+}
+
+.aarav-selector-card a {
+    color: var(--gold) !important;
+
+    font-size: 10px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: .45px;
+}
+
+
+/* =========================================================
+   7. BOOKING MOMENT
+   ========================================================= */
+
+.aarav-booking {
+    padding: 92px 0;
+
+    background: var(--cream-2);
+}
+
+.aarav-booking-shell {
+    position: relative;
+    overflow: hidden;
+
+    min-height: 500px;
+
+    border-radius: 18px;
+
+    background: var(--ink);
+}
+
+.aarav-booking-image {
+    position: absolute;
+    inset: 0 46% 0 0;
+}
+
+.aarav-booking-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.aarav-booking-image::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(90deg, transparent 55%, rgba(17,16,15,.85) 100%);
+}
+
+.aarav-booking-copy {
+    position: relative;
+    z-index: 2;
+
+    width: 54%;
+    margin-left: auto;
+    padding: 70px 58px;
+}
+
+.aarav-booking-copy .aarav-section-title {
+    color: #fff;
+}
+
+.aarav-booking-copy .aarav-section-copy {
+    color: rgba(255,255,255,.67);
+}
+
+.aarav-booking-actions {
+    margin-top: 25px;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.aarav-booking .aarav-button-outline {
+    border-color: rgba(255,255,255,.6);
+    color: #fff !important;
+}
+
+.aarav-booking .aarav-button-outline:hover {
+    background: #fff;
+    color: var(--ink) !important;
+}
+
+
+/* =========================================================
+   8. FAQ
+   ========================================================= */
+
+.aarav-faq {
+    padding: 88px 0;
+
+    background: #fffdf9;
+}
+
+.aarav-faq-grid {
+    display: grid;
+    grid-template-columns: .7fr 1.3fr;
+    gap: 56px;
+    align-items: start;
+}
+
+.aarav-faq-list {
+    display: grid;
+    gap: 10px;
+}
+
+.aarav-faq details {
+    border-bottom: 1px solid var(--line);
+}
+
+.aarav-faq summary {
+    position: relative;
+
+    min-height: 58px;
+    padding: 16px 42px 16px 0;
+
+    display: flex;
+    align-items: center;
+
+    cursor: pointer;
+    list-style: none;
+
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.aarav-faq summary::-webkit-details-marker {
+    display: none;
+}
+
+.aarav-faq summary::after {
+    content: "+";
+
+    position: absolute;
+    right: 0;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    color: var(--gold);
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 25px;
+    font-weight: 400;
+}
+
+.aarav-faq details[open] summary::after {
+    content: "−";
+}
+
+.aarav-faq-answer {
+    padding: 0 36px 18px 0;
+
+    color: var(--muted);
+
+    font-size: 11.5px;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1080px) {
+
+    .aarav-hero-inner {
+        grid-template-columns: 1fr;
+        gap: 36px;
+    }
+
+    .aarav-hero-copy {
+        max-width: 760px;
+    }
+
+    .aarav-hero-visual {
+        min-height: 560px;
+    }
+
+    .aarav-edit-grid,
+    .aarav-expect-grid,
+    .aarav-faq-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .aarav-selector-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .aarav-booking-image {
+        inset: 0 40% 0 0;
+    }
+
+    .aarav-booking-copy {
+        width: 60%;
+    }
+
+}
+
+@media (max-width: 760px) {
+
+    .aarav-wrap,
+    .aarav-hero-inner {
+        width: calc(100% - 30px);
+    }
+
+    .aarav-hero-inner {
+        min-height: auto;
+        padding: 52px 0 40px;
+    }
+
+    .aarav-hero h1 {
+        font-size: 49px;
+    }
+
+    .aarav-hero-lead {
+        font-size: 14px;
+    }
+
+    .aarav-hero-visual {
+        min-height: 470px;
+    }
+
+    .aarav-hero-main-image {
+        width: 82%;
+        height: 430px;
+    }
+
+    .aarav-hero-small-image {
+        width: 41%;
+        height: 210px;
+    }
+
+    .aarav-floating-book {
+        width: 240px;
+        right: 0;
+    }
+
+    .aarav-marquee-track {
+        gap: 20px;
+        justify-content: flex-start;
+        overflow-x: auto;
+        padding: 0 15px;
+    }
+
+    .aarav-edit,
+    .aarav-ritual,
+    .aarav-expect,
+    .aarav-selector,
+    .aarav-booking,
+    .aarav-faq {
+        padding: 58px 0;
+    }
+
+    .aarav-edit-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .aarav-edit-card-large,
+    .aarav-edit-card-small {
+        min-height: 320px;
+    }
+
+    .aarav-ritual-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .aarav-expect-list,
+    .aarav-selector-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .aarav-booking-shell {
+        min-height: auto;
+    }
+
+    .aarav-booking-image {
+        position: relative;
+        inset: auto;
+
+        width: 100%;
+        height: 320px;
+    }
+
+    .aarav-booking-image::after {
+        background: linear-gradient(180deg, transparent 55%, rgba(17,16,15,.75) 100%);
+    }
+
+    .aarav-booking-copy {
+        width: 100%;
+        margin: 0;
+        padding: 38px 24px;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .aarav-hero h1 {
+        font-size: 41px;
+    }
+
+    .aarav-hero-actions {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .aarav-button {
+        width: 100%;
+    }
+
+    .aarav-hero-visual {
+        min-height: 420px;
+    }
+
+    .aarav-hero-main-image {
+        width: 88%;
+        height: 390px;
+    }
+
+    .aarav-hero-small-image {
+        width: 43%;
+        height: 180px;
+        border-width: 5px;
+    }
+
+    .aarav-floating-book {
+        width: 210px;
+        padding: 16px;
+    }
+
+    .aarav-selector-head {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .aarav-booking-actions {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+}
+</style>
+
+
+<div class="aarav-home">
+
+
+<!-- ======================================================
+     HERO
+     ====================================================== -->
+
+<section class="aarav-hero">
+
+    <div class="aarav-wrap aarav-hero-inner">
+
+
+        <div class="aarav-hero-copy">
+
+            <div class="aarav-hero-mark">
+                <span></span>
+                Aarav Beauty
+            </div>
+
+
+            <h1>
+                Beauty that feels<br>
+                <em>like you.</em>
+            </h1>
+
+
+            <p class="aarav-hero-lead">
+                Hair, beauty and wellness in a softer, more personal setting.
+                Explore treatments, find what suits you and reserve your time online.
+            </p>
+
+
+            <div class="aarav-hero-actions">
+
+                <a href="/book-appointment/" class="aarav-button aarav-button-dark">
+                    Book Appointment
+                </a>
+
+                <a href="/services/" class="aarav-button aarav-button-outline">
+                    Discover Services
+                </a>
+
+            </div>
+
+
+            <div class="aarav-hero-note">
+
+                <div class="aarav-hero-note-icon">
+
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                        <rect x="4" y="5" width="16" height="15" rx="2"/>
+                        <path d="M8 3v4M16 3v4M4 10h16"/>
+                    </svg>
+
+                </div>
+
+                <span>
+                    Choose your service first, then select an available appointment.
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="aarav-hero-visual">
+
+
+            <div class="aarav-hero-main-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1560066984-138dadb4c035?fit=crop&w=1200&q=88"
+                    alt="Modern luxury hair and beauty salon">
+
+            </div>
+
+
+            <div class="aarav-hero-small-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1522336572468-97b06e8ef143?fit=crop&w=700&q=87"
+                    alt="Professional hair styling">
+
+            </div>
+
+
+            <div class="aarav-floating-book">
+
+                <strong>Make time for you.</strong>
+
+                <span>
+                    Browse our services and reserve your next visit.
+                </span>
+
+                <a href="/book-appointment/">
+                    Book your appointment →
+                </a>
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- ======================================================
+     MARQUEE
+     ====================================================== -->
+
+<div class="aarav-marquee">
+
+    <div class="aarav-marquee-track">
+
+        <span class="aarav-marquee-item">
+            Hair
+            <span class="aarav-marquee-dot"></span>
+        </span>
+
+        <span class="aarav-marquee-item">
+            Beauty
+            <span class="aarav-marquee-dot"></span>
+        </span>
+
+        <span class="aarav-marquee-item">
+            Colour
+            <span class="aarav-marquee-dot"></span>
+        </span>
+
+        <span class="aarav-marquee-item">
+            Styling
+            <span class="aarav-marquee-dot"></span>
+        </span>
+
+        <span class="aarav-marquee-item">
+            Wellness
+            <span class="aarav-marquee-dot"></span>
+        </span>
+
+        <span class="aarav-marquee-item">
+            Self-care
+        </span>
+
+    </div>
+
+</div>
+
+
+<!-- ======================================================
+     THE AARAV EDIT
+     ====================================================== -->
+
+<section class="aarav-edit">
+
+    <div class="aarav-wrap">
+
+        <div class="aarav-edit-head">
+
+            <div class="aarav-eyebrow">
+                The Aarav Edit
+            </div>
+
+            <h2 class="aarav-section-title">
+                Choose what feels right today.
+            </h2>
+
+            <p class="aarav-section-copy">
+                Start with the part of your routine you want to refresh.
+                Each service area is designed to make browsing simple and booking easy.
+            </p>
+
+        </div>
+
+
+        <div class="aarav-edit-grid">
+
+
+            <a href="/hair/" class="aarav-edit-card aarav-edit-card-large">
+
+                <img
+                    src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?fit=crop&w=1200&q=87"
+                    alt="Hair styling and salon treatment"
+                    loading="lazy">
+
+                <div class="aarav-edit-card-body">
+
+                    <h3>Hair</h3>
+
+                    <p>
+                        Cuts, colour and styling for everyday confidence or a fresh new look.
+                    </p>
+
+                    <span>Explore hair services →</span>
+
+                </div>
+
+            </a>
+
+
+            <div class="aarav-edit-column">
+
+
+                <a href="/beauty/" class="aarav-edit-card aarav-edit-card-small">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?fit=crop&w=900&q=87"
+                        alt="Beauty and skincare treatment"
+                        loading="lazy">
+
+                    <div class="aarav-edit-card-body">
+
+                        <h3>Beauty</h3>
+
+                        <p>
+                            Personalised treatments for care, polish and confidence.
+                        </p>
+
+                        <span>Explore beauty →</span>
+
+                    </div>
+
+                </a>
+
+
+                <a href="/services/" class="aarav-edit-card aarav-edit-card-small">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?fit=crop&w=900&q=87"
+                        alt="Wellness and relaxation treatment"
+                        loading="lazy">
+
+                    <div class="aarav-edit-card-body">
+
+                        <h3>Wellness</h3>
+
+                        <p>
+                            Slow down, reset and make space for a little self-care.
+                        </p>
+
+                        <span>Explore wellness →</span>
+
+                    </div>
+
+                </a>
+
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- ======================================================
+     THE AARAV RITUAL
+     ====================================================== -->
+
+<section class="aarav-ritual">
+
+    <div class="aarav-wrap">
+
+        <div class="aarav-ritual-head">
+
+            <div class="aarav-eyebrow">
+                The Aarav Ritual
+            </div>
+
+            <h2 class="aarav-section-title">
+                A simpler way to plan your visit.
+            </h2>
+
+            <p class="aarav-section-copy">
+                No complicated journey. Just choose, reserve and arrive.
+            </p>
+
+        </div>
+
+
+        <div class="aarav-ritual-grid">
+
+
+            <div class="aarav-ritual-card">
+
+                <div class="aarav-ritual-number">
+                    01
+                </div>
+
+                <h3>Find your service</h3>
+
+                <p>
+                    Browse hair, beauty and wellness treatments and choose what matches your needs.
+                </p>
+
+            </div>
+
+
+            <div class="aarav-ritual-card">
+
+                <div class="aarav-ritual-number">
+                    02
+                </div>
+
+                <h3>Choose your time</h3>
+
+                <p>
+                    Head to the booking page and select an appointment that works for you.
+                </p>
+
+            </div>
+
+
+            <div class="aarav-ritual-card">
+
+                <div class="aarav-ritual-number">
+                    03
+                </div>
+
+                <h3>Enjoy your visit</h3>
+
+                <p>
+                    Arrive knowing your appointment is already organised and ready.
+                </p>
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- ======================================================
+     WHAT TO EXPECT
+     ====================================================== -->
+
+<section class="aarav-expect">
+
+    <div class="aarav-wrap aarav-expect-grid">
+
+
+        <div class="aarav-expect-quote">
+
+            <p>
+                “Beauty should feel personal, polished and easy to make time for.”
+            </p>
+
+            <span>
+                Aarav Beauty
+            </span>
+
+        </div>
+
+
+        <div class="aarav-expect-list">
+
+
+            <div class="aarav-expect-item">
+
+                <div class="aarav-expect-icon">
+
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                        <path d="M4 20c4-2 6-5 7-9 1-3 4-5 9-7"/>
+                        <path d="M7 17c2 1 4 2 7 2"/>
+                    </svg>
+
+                </div>
+
+                <strong>Clear service choices</strong>
+
+                <p>
+                    Browse by category without having to dig through a complicated menu.
+                </p>
+
+            </div>
+
+
+            <div class="aarav-expect-item">
+
+                <div class="aarav-expect-icon">
+
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                        <rect x="4" y="5" width="16" height="15" rx="2"/>
+                        <path d="M8 3v4M16 3v4M4 10h16"/>
+                    </svg>
+
+                </div>
+
+                <strong>Simple online booking</strong>
+
+                <p>
+                    Move from choosing a service to reserving your appointment in a few steps.
+                </p>
+
+            </div>
+
+
+            <div class="aarav-expect-item">
+
+                <div class="aarav-expect-icon">
+
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                        <path d="M12 21s-7-4.4-7-10a4 4 0 0 1 7-2.7A4 4 0 0 1 19 11c0 5.6-7 10-7 10z"/>
+                    </svg>
+
+                </div>
+
+                <strong>A softer experience</strong>
+
+                <p>
+                    A beauty brand designed around care, comfort and personal attention.
+                </p>
+
+            </div>
+
+
+            <div class="aarav-expect-item">
+
+                <div class="aarav-expect-icon">
+
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                        <circle cx="12" cy="12" r="8"/>
+                        <path d="m8 12 2.5 2.5L16 9"/>
+                    </svg>
+
+                </div>
+
+                <strong>Easy to understand</strong>
+
+                <p>
+                    Service descriptions are written to help you quickly decide where to start.
+                </p>
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- ======================================================
+     TREATMENT SELECTOR
+     ====================================================== -->
+
+<section class="aarav-selector">
+
+    <div class="aarav-wrap">
+
+
+        <div class="aarav-selector-head">
+
+            <div>
+
+                <div class="aarav-eyebrow">
+                    Find your next appointment
+                </div>
+
+                <h2 class="aarav-section-title">
+                    What are you in the mood for?
+                </h2>
+
+                <p class="aarav-section-copy">
+                    Choose a starting point and explore the relevant service page.
+                </p>
+
+            </div>
+
+
+            <a href="/services/" class="aarav-button aarav-button-outline">
+                View all services
+            </a>
+
+        </div>
+
+
+        <div class="aarav-selector-grid">
+
+
+            <div class="aarav-selector-card">
+
+                <small>Hair</small>
+
+                <h3>Fresh cut</h3>
+
+                <p>
+                    For shape, maintenance or a completely refreshed look.
+                </p>
+
+                <a href="/hair/">
+                    Explore →
+                </a>
+
+            </div>
+
+
+            <div class="aarav-selector-card">
+
+                <small>Colour</small>
+
+                <h3>New tone</h3>
+
+                <p>
+                    Explore colour options when you want something subtle or more noticeable.
+                </p>
+
+                <a href="/hair/">
+                    Explore →
+                </a>
+
+            </div>
+
+
+            <div class="aarav-selector-card">
+
+                <small>Beauty</small>
+
+                <h3>Polished feel</h3>
+
+                <p>
+                    Beauty treatments designed to fit into your personal care routine.
+                </p>
+
+                <a href="/beauty/">
+                    Explore →
+                </a>
+
+            </div>
+
+
+            <div class="aarav-selector-card">
+
+                <small>Wellness</small>
+
+                <h3>Time to reset</h3>
+
+                <p>
+                    Make space for a slower, more relaxed part of your beauty routine.
+                </p>
+
+                <a href="/services/">
+                    Explore →
+                </a>
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- ======================================================
+     BOOKING MOMENT
+     ====================================================== -->
+
+<section class="aarav-booking">
+
+    <div class="aarav-wrap">
+
+
+        <div class="aarav-booking-shell">
+
+
+            <div class="aarav-booking-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1562322140-8baeececf3df?fit=crop&w=1200&q=87"
+                    alt="Modern beauty salon"
+                    loading="lazy">
+
+            </div>
+
+
+            <div class="aarav-booking-copy">
+
+                <div class="aarav-eyebrow">
+                    Your time
+                </div>
+
+                <h2 class="aarav-section-title">
+                    Ready when you are.
+                </h2>
+
+                <p class="aarav-section-copy">
+                    Choose your service, select your preferred appointment time
+                    and keep your next visit simple.
+                </p>
+
+
+                <div class="aarav-booking-actions">
+
+                    <a href="/book-appointment/" class="aarav-button aarav-button-rose">
+                        Book Appointment
+                    </a>
+
+                    <a href="/contact/" class="aarav-button aarav-button-outline">
+                        Ask a Question
+                    </a>
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- ======================================================
+     FAQ
+     ====================================================== -->
+
+<section class="aarav-faq">
+
+    <div class="aarav-wrap aarav-faq-grid">
+
+
+        <div>
+
+            <div class="aarav-eyebrow">
+                A little help
+            </div>
+
+            <h2 class="aarav-section-title">
+                Before you book.
+            </h2>
+
+            <p class="aarav-section-copy">
+                A few simple answers to help you decide what to do next.
+            </p>
+
+        </div>
+
+
+        <div class="aarav-faq-list">
+
+
+            <details>
+
+                <summary>
+                    How do I make an appointment?
+                </summary>
+
+                <div class="aarav-faq-answer">
+                    Use the Book Appointment button to open the booking page,
+                    choose your service and select an available time.
+                </div>
+
+            </details>
+
+
+            <details>
+
+                <summary>
+                    Can I look through services first?
+                </summary>
+
+                <div class="aarav-faq-answer">
+                    Yes. Use the Services, Hair and Beauty pages to explore the
+                    available service areas before you book.
+                </div>
+
+            </details>
+
+
+            <details>
+
+                <summary>
+                    What if I am not sure what to book?
+                </summary>
+
+                <div class="aarav-faq-answer">
+                    Use the Contact page to send your question before booking.
+                    You can explain what you are looking for and decide from there.
+                </div>
+
+            </details>
+
+
+            <details>
+
+                <summary>
+                    Can I contact Aarav Beauty directly?
+                </summary>
+
+                <div class="aarav-faq-answer">
+                    Yes. The website includes phone and email contact details
+                    in the header, footer and Contact page.
+                </div>
+
+            </details>
+
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+</div>
+<!-- /wp:html -->

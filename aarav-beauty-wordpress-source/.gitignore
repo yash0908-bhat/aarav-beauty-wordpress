@@ -1,0 +1,27 @@
+# OS/editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Environment & secrets
+.env
+.env.*
+!.env.example
+wp-config.php
+
+# Dependencies/build output
+node_modules/
+vendor/
+dist/
+build/
+
+# Logs/cache
+*.log
+.cache/
+
+# WordPress uploads/backups
+wp-content/uploads/
+*.sql
+*.sql.gz
+*.zip

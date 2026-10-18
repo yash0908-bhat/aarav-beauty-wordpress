@@ -1,0 +1,1325 @@
+<!-- wp:html -->
+<style>
+/* =========================================================
+   AARAV BEAUTY — ABOUT US PAGE
+   Story-led editorial layout
+   ========================================================= */
+
+.aarav-about-page,
+.aarav-about-page * {
+    box-sizing:border-box;
+}
+
+.aarav-about-page {
+    --ink:#171311;
+    --ink-soft:#2a2421;
+    --cream:#f8f2eb;
+    --cream-2:#f1e5da;
+    --paper:#fffdf9;
+    --rose:#d8b3a6;
+    --rose-deep:#b98576;
+    --gold:#c89b58;
+    --gold-light:#e1c18b;
+    --muted:#756a63;
+    --line:#e7dbcf;
+    --white:#fff;
+
+    width:100vw;
+    max-width:100vw;
+    margin-left:calc(50% - 50vw)!important;
+    overflow-x:hidden;
+
+    background:var(--paper);
+    color:var(--ink);
+
+    font-family:Arial,Helvetica,sans-serif;
+}
+
+.aarav-about-page h1,
+.aarav-about-page h2,
+.aarav-about-page h3,
+.aarav-about-page p {
+    margin-top:0;
+}
+
+.aarav-about-page a {
+    text-decoration:none;
+}
+
+.aarav-about-page img {
+    display:block;
+    width:100%;
+}
+
+.aarav-ap-wrap {
+    width:min(1320px,calc(100% - 48px));
+    margin:0 auto;
+}
+
+.aarav-ap-eyebrow {
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+
+    margin-bottom:14px;
+
+    color:var(--rose-deep);
+
+    font-size:10px;
+    font-weight:900;
+    letter-spacing:1.6px;
+    text-transform:uppercase;
+}
+
+.aarav-ap-eyebrow::before {
+    content:"";
+    width:30px;
+    height:1px;
+    background:var(--gold);
+}
+
+.aarav-ap-title {
+    margin-bottom:14px;
+
+    font-family:Georgia,"Times New Roman",serif;
+    font-size:clamp(34px,4vw,54px);
+    line-height:1.02;
+    letter-spacing:-1px;
+    font-weight:500;
+}
+
+.aarav-ap-copy {
+    max-width:730px;
+    margin-bottom:0;
+
+    color:var(--muted);
+
+    font-size:14px;
+    line-height:1.75;
+}
+
+.aarav-ap-btn {
+    min-height:48px;
+    padding:0 22px;
+
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+
+    border:1px solid transparent;
+    border-radius:999px;
+
+    font-size:10px;
+    font-weight:900;
+    letter-spacing:.55px;
+    text-transform:uppercase;
+
+    transition:all .2s ease;
+}
+
+.aarav-ap-btn:hover {
+    transform:translateY(-1px);
+}
+
+.aarav-ap-btn-dark {
+    background:var(--ink);
+    color:#fff!important;
+}
+
+.aarav-ap-btn-dark:hover {
+    background:#000;
+}
+
+.aarav-ap-btn-outline {
+    border-color:var(--ink);
+    background:transparent;
+    color:var(--ink)!important;
+}
+
+.aarav-ap-btn-outline:hover {
+    background:var(--ink);
+    color:#fff!important;
+}
+
+.aarav-ap-btn-rose {
+    background:var(--rose);
+    color:var(--ink)!important;
+}
+
+.aarav-ap-btn-rose:hover {
+    background:#e5c5bb;
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.aarav-ap-hero {
+    position:relative;
+    overflow:hidden;
+
+    background:
+        radial-gradient(circle at 18% 20%,rgba(216,179,166,.22),transparent 28%),
+        linear-gradient(112deg,#fbf7f3 0%,#f4e9df 100%);
+}
+
+.aarav-ap-hero-grid {
+    min-height:690px;
+    padding:70px 0 60px;
+
+    display:grid;
+    grid-template-columns:.92fr 1.08fr;
+    gap:64px;
+    align-items:center;
+}
+
+.aarav-ap-hero-copy {
+    max-width:620px;
+}
+
+.aarav-ap-hero h1 {
+    margin-bottom:20px;
+
+    font-family:Georgia,"Times New Roman",serif;
+    font-size:clamp(56px,7vw,92px);
+    line-height:.94;
+    letter-spacing:-2.4px;
+    font-weight:500;
+}
+
+.aarav-ap-hero h1 em {
+    color:var(--rose-deep);
+    font-style:italic;
+    font-weight:400;
+}
+
+.aarav-ap-hero-lead {
+    max-width:580px;
+    margin-bottom:28px;
+
+    color:#625850;
+
+    font-size:15px;
+    line-height:1.8;
+}
+
+.aarav-ap-hero-actions {
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+}
+
+.aarav-ap-hero-visual {
+    position:relative;
+    min-height:560px;
+}
+
+.aarav-ap-hero-image {
+    position:absolute;
+    inset:0 0 0 12%;
+
+    overflow:hidden;
+
+    border-radius:180px 180px 18px 18px;
+}
+
+.aarav-ap-hero-image img {
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    object-position:center 45%;
+}
+
+.aarav-ap-hero-quote {
+    position:absolute;
+    left:0;
+    bottom:28px;
+    z-index:2;
+
+    width:270px;
+    padding:21px;
+
+    border:1px solid rgba(200,155,88,.28);
+    border-radius:14px;
+
+    background:rgba(255,253,249,.96);
+    backdrop-filter:blur(9px);
+
+    box-shadow:0 16px 36px rgba(61,42,29,.12);
+}
+
+.aarav-ap-hero-quote strong {
+    display:block;
+    margin-bottom:7px;
+
+    font-family:Georgia,"Times New Roman",serif;
+    font-size:18px;
+    font-weight:500;
+}
+
+.aarav-ap-hero-quote span {
+    display:block;
+
+    color:var(--muted);
+
+    font-size:10px;
+    line-height:1.55;
+}
+
+
+/* =========================================================
+   STORY
+   ========================================================= */
+
+.aarav-ap-story {
+    padding:92px 0;
+    background:#fff;
+}
+
+.aarav-ap-story-grid {
+    display:grid;
+    grid-template-columns:.78fr 1.22fr;
+    gap:70px;
+    align-items:start;
+}
+
+.aarav-ap-story-quote {
+    padding-left:30px;
+    border-left:1px solid var(--gold);
+}
+
+.aarav-ap-story-quote p {
+    margin-bottom:17px;
+
+    font-family:Georgia,"Times New Roman",serif;
+    font-size:clamp(28px,3vw,41px);
+    line-height:1.22;
+}
+
+.aarav-ap-story-quote span {
+    color:var(--rose-deep);
+
+    font-size:9px;
+    font-weight:900;
+    letter-spacing:1.2px;
+    text-transform:uppercase;
+}
+
+.aarav-ap-story-copy p {
+    margin-bottom:17px;
+
+    color:var(--muted);
+
+    font-size:14px;
+    line-height:1.8;
+}
+
+.aarav-ap-story-copy p:last-child {
+    margin-bottom:0;
+}
+
+
+/* =========================================================
+   VALUES
+   ========================================================= */
+
+.aarav-ap-values {
+    padding:90px 0;
+    background:var(--cream);
+}
+
+.aarav-ap-values-head {
+    max-width:760px;
+    margin-bottom:34px;
+}
+
+.aarav-ap-values-grid {
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:14px;
+}
+
+.aarav-ap-value-card {
+    padding:27px 22px;
+
+    border:1px solid var(--line);
+    border-radius:14px;
+
+    background:#fff;
+
+    transition:all .2s ease;
+}
+
+.aarav-ap-value-card:hover {
+    transform:translateY(-3px);
+    border-color:#d6c0ad;
+    box-shadow:0 10px 26px rgba(60,39,25,.06);
+}
+
+.aarav-ap-value-icon {
+    width:46px;
+    height:46px;
+    margin-bottom:18px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border-radius:50%;
+
+    background:#f7eee6;
+    color:var(--gold);
+}
+
+.aarav-ap-value-icon svg {
+    width:22px;
+    height:22px;
+}
+
+.aarav-ap-value-card h3 {
+    margin-bottom:8px;
+
+    font-family:Georgia,"Times New Roman",serif;
+    font-size:20px;
+    font-weight:500;
+}
+
+.aarav-ap-value-card p {
+    margin-bottom:0;
+
+    color:var(--muted);
+
+    font-size:10.5px;
+    line-height:1.6;
+}
+
+
+/* =========================================================
+   EXPERIENCE
+   ========================================================= */
+
+.aarav-ap-experience {
+    padding:92px 0;
+    background:var(--ink);
+    color:#fff;
+}
+
+.aarav-ap-experience-grid {
+    display:grid;
+    grid-template-columns:1.05fr .95fr;
+    gap:56px;
+    align-items:center;
+}
+
+.aarav-ap-experience-image {
+    min-height:520px;
+    overflow:hidden;
+
+    border-radius:18px;
+}
+
+.aarav-ap-experience-image img {
+    width:100%;
+    height:520px;
+    object-fit:cover;
+}
+
+.aarav-ap-experience .aarav-ap-title {
+    color:#fff;
+}
+
+.aarav-ap-experience .aarav-ap-copy {
+    color:rgba(255,255,255,.62);
+}
+
+.aarav-ap-experience-list {
+    margin:26px 0 28px;
+
+    display:grid;
+    gap:14px;
+}
+
+.aarav-ap-experience-item {
+    padding-bottom:14px;
+
+    display:grid;
+    grid-template-columns:32px 1fr;
+    gap:11px;
+
+    border-bottom:1px solid rgba(255,255,255,.09);
+}
+
+.aarav-ap-experience-item:last-child {
+    border-bottom:0;
+}
+
+.aarav-ap-experience-icon {
+    width:32px;
+    height:32px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border:1px solid rgba(200,155,88,.32);
+    border-radius:50%;
+
+    color:var(--gold);
+}
+
+.aarav-ap-experience-icon svg {
+    width:15px;
+    height:15px;
+}
+
+.aarav-ap-experience-item strong {
+    display:block;
+    margin-bottom:4px;
+
+    color:#fff;
+
+    font-size:11.5px;
+}
+
+.aarav-ap-experience-item span {
+    display:block;
+
+    color:rgba(255,255,255,.58);
+
+    font-size:10px;
+    line-height:1.5;
+}
+
+
+/* =========================================================
+   BRAND MOOD
+   ========================================================= */
+
+.aarav-ap-mood {
+    padding:92px 0;
+    background:var(--paper);
+}
+
+.aarav-ap-mood-head {
+    max-width:760px;
+    margin-bottom:34px;
+}
+
+.aarav-ap-mood-grid {
+    display:grid;
+    grid-template-columns:1.15fr .85fr;
+    gap:16px;
+}
+
+.aarav-ap-mood-card {
+    position:relative;
+    overflow:hidden;
+
+    min-height:540px;
+
+    border-radius:16px;
+}
+
+.aarav-ap-mood-card img {
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.aarav-ap-mood-overlay {
+    position:absolute;
+    inset:auto 0 0 0;
+
+    padding:28px;
+
+    background:linear-gradient(180deg,transparent,rgba(17,16,15,.80));
+
+    color:#fff;
+}
+
+.aarav-ap-mood-overlay h3 {
+    margin-bottom:7px;
+
+    font-family:Georgia,"Times New Roman",serif;
+    font-size:28px;
+    font-weight:500;
+}
+
+.aarav-ap-mood-overlay p {
+    max-width:480px;
+    margin-bottom:0;
+
+    color:rgba(255,255,255,.70);
+
+    font-size:10.5px;
+    line-height:1.6;
+}
+
+
+/* =========================================================
+   PROMISE
+   ========================================================= */
+
+.aarav-ap-promise {
+    padding:90px 0;
+    background:var(--cream-2);
+}
+
+.aarav-ap-promise-grid {
+    display:grid;
+    grid-template-columns:.82fr 1.18fr;
+    gap:48px;
+    align-items:center;
+}
+
+.aarav-ap-promise-number {
+    position:relative;
+
+    min-height:350px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    overflow:hidden;
+
+    border:1px solid rgba(200,155,88,.22);
+    border-radius:20px;
+
+    background:
+        radial-gradient(circle at 50% 38%,rgba(216,179,166,.24),transparent 42%),
+        linear-gradient(145deg,#fbf6f1,#ead8cd);
+
+    color:rgba(185,133,118,.68);
+
+    font-family:Georgia,"Times New Roman",serif;
+    font-size:170px;
+    line-height:1;
+    font-weight:400;
+
+    box-shadow:0 18px 42px rgba(64,42,29,.07);
+}
+
+.aarav-ap-promise-number::before {
+    content:"";
+
+    position:absolute;
+    inset:18px;
+
+    border:1px solid rgba(200,155,88,.16);
+    border-radius:15px;
+
+    pointer-events:none;
+}
+
+.aarav-ap-promise-number::after {
+    content:"AARAV BEAUTY";
+
+    position:absolute;
+    left:0;
+    right:0;
+    bottom:30px;
+
+    text-align:center;
+
+    color:var(--ink);
+
+    font-family:Arial,Helvetica,sans-serif;
+    font-size:9px;
+    font-weight:900;
+    letter-spacing:2.4px;
+}
+
+.aarav-ap-promise-copy {
+    max-width:760px;
+}
+
+.aarav-ap-promise-copy p {
+    margin-bottom:22px;
+
+    color:var(--muted);
+
+    font-size:14px;
+    line-height:1.8;
+}
+
+.aarav-ap-promise-points {
+    margin:24px 0 28px;
+
+    display:flex;
+    flex-wrap:wrap;
+    gap:9px;
+}
+
+.aarav-ap-promise-point {
+    padding:9px 13px;
+
+    border:1px solid #d8c5b5;
+    border-radius:999px;
+
+    background:rgba(255,255,255,.45);
+
+    color:var(--ink);
+
+    font-size:9px;
+    font-weight:900;
+    letter-spacing:.65px;
+    text-transform:uppercase;
+}
+
+
+/* =========================================================
+   CTA
+   ========================================================= */
+
+.aarav-ap-cta {
+    padding:86px 0;
+    background:#fff;
+}
+
+.aarav-ap-cta-shell {
+    padding:56px;
+
+    display:grid;
+    grid-template-columns:1fr auto;
+    gap:40px;
+    align-items:center;
+
+    border-radius:18px;
+
+    background:
+        radial-gradient(circle at 20% 20%,rgba(216,179,166,.18),transparent 32%),
+        linear-gradient(110deg,#fbf6f1,#f2e5dc);
+}
+
+.aarav-ap-cta-actions {
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media(max-width:1080px) {
+
+    .aarav-ap-hero-grid,
+    .aarav-ap-story-grid,
+    .aarav-ap-experience-grid,
+    .aarav-ap-promise-grid {
+        grid-template-columns:1fr;
+    }
+
+    .aarav-ap-values-grid {
+        grid-template-columns:1fr 1fr;
+    }
+
+    .aarav-ap-hero-visual {
+        min-height:500px;
+    }
+
+    .aarav-ap-mood-grid {
+        grid-template-columns:1fr 1fr;
+    }
+
+    .aarav-ap-cta-shell {
+        grid-template-columns:1fr;
+    }
+
+}
+
+@media(max-width:760px) {
+
+    .aarav-ap-wrap {
+        width:calc(100% - 30px);
+    }
+
+    .aarav-ap-hero-grid {
+        min-height:auto;
+        padding:56px 0 46px;
+    }
+
+    .aarav-ap-hero h1 {
+        font-size:48px;
+    }
+
+    .aarav-ap-hero-visual {
+        min-height:420px;
+    }
+
+    .aarav-ap-hero-image {
+        inset:0 0 0 7%;
+    }
+
+    .aarav-ap-hero-quote {
+        width:220px;
+        bottom:14px;
+    }
+
+    .aarav-ap-story,
+    .aarav-ap-values,
+    .aarav-ap-experience,
+    .aarav-ap-mood,
+    .aarav-ap-promise,
+    .aarav-ap-cta {
+        padding:58px 0;
+    }
+
+    .aarav-ap-values-grid,
+    .aarav-ap-mood-grid {
+        grid-template-columns:1fr;
+    }
+
+    .aarav-ap-mood-card {
+        min-height:360px;
+    }
+
+
+    .aarav-ap-promise-number {
+        min-height:260px;
+        font-size:125px;
+    }
+
+    .aarav-ap-cta-shell {
+        padding:36px 24px;
+    }
+
+}
+
+@media(max-width:480px) {
+
+    .aarav-ap-hero h1 {
+        font-size:41px;
+    }
+
+    .aarav-ap-hero-actions,
+    .aarav-ap-cta-actions {
+        display:grid;
+        grid-template-columns:1fr;
+    }
+
+    .aarav-ap-btn {
+        width:100%;
+    }
+
+    .aarav-ap-values-grid {
+        grid-template-columns:1fr;
+    }
+
+}
+</style>
+
+
+<div class="aarav-about-page">
+
+
+<!-- HERO -->
+<section class="aarav-ap-hero">
+
+    <div class="aarav-ap-wrap aarav-ap-hero-grid">
+
+
+        <div class="aarav-ap-hero-copy">
+
+            <div class="aarav-ap-eyebrow">
+                About Aarav Beauty
+            </div>
+
+            <h1>
+                Beauty with a<br>
+                <em>softer point of view.</em>
+            </h1>
+
+            <p class="aarav-ap-hero-lead">
+                Aarav Beauty is built around a simple idea: beauty should feel personal,
+                polished and easy to make time for.
+            </p>
+
+            <div class="aarav-ap-hero-actions">
+
+                <a href="/services/" class="aarav-ap-btn aarav-ap-btn-dark">
+                    Explore Services
+                </a>
+
+                <a href="/book-appointment/" class="aarav-ap-btn aarav-ap-btn-outline">
+                    Book Appointment
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="aarav-ap-hero-visual">
+
+            <div class="aarav-ap-hero-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?fit=crop&w=1200&q=88"
+                    alt="Modern and elegant beauty salon">
+
+            </div>
+
+            <div class="aarav-ap-hero-quote">
+
+                <strong>
+                    Personal care, without the fuss.
+                </strong>
+
+                <span>
+                    A beauty experience designed to feel calm, clear and considered from the moment you arrive.
+                </span>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- STORY -->
+<section class="aarav-ap-story">
+
+    <div class="aarav-ap-wrap aarav-ap-story-grid">
+
+
+        <div class="aarav-ap-story-quote">
+
+            <p>
+                “A salon should feel like somewhere you want to return to, not somewhere you rush through.”
+            </p>
+
+            <span>
+                The Aarav Beauty idea
+            </span>
+
+        </div>
+
+
+        <div class="aarav-ap-story-copy">
+
+            <div class="aarav-ap-eyebrow">
+                Our story
+            </div>
+
+            <h2 class="aarav-ap-title">
+                Created around the way people actually want to feel.
+            </h2>
+
+            <p>
+                Aarav Beauty was shaped around a more relaxed approach to hair, beauty and wellness.
+                The goal is not to overcomplicate the experience — it is to make choosing a service,
+                booking your visit and enjoying your appointment feel straightforward.
+            </p>
+
+            <p>
+                That means clear service categories, an easy booking journey and a brand experience
+                that feels warm rather than clinical. Hair, beauty and wellness all sit under one roof
+                so your personal care routine can feel more connected.
+            </p>
+
+            <p>
+                As the service menu develops, the same principle stays the same:
+                keep the experience personal, polished and simple.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- VALUES -->
+<section class="aarav-ap-values">
+
+    <div class="aarav-ap-wrap">
+
+        <div class="aarav-ap-values-head">
+
+            <div class="aarav-ap-eyebrow">
+                What matters to us
+            </div>
+
+            <h2 class="aarav-ap-title">
+                The feeling behind the brand.
+            </h2>
+
+            <p class="aarav-ap-copy">
+                Aarav Beauty is designed around four simple values that shape the way the brand looks,
+                feels and communicates.
+            </p>
+
+        </div>
+
+
+        <div class="aarav-ap-values-grid">
+
+
+            <div class="aarav-ap-value-card">
+
+                <div class="aarav-ap-value-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                        <path d="M12 21s-7-4.4-7-10a4 4 0 0 1 7-2.7A4 4 0 0 1 19 11c0 5.6-7 10-7 10z"/>
+                    </svg>
+                </div>
+
+                <h3>Personal</h3>
+
+                <p>
+                    Beauty should feel relevant to you rather than generic or one-size-fits-all.
+                </p>
+
+            </div>
+
+
+            <div class="aarav-ap-value-card">
+
+                <div class="aarav-ap-value-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                        <path d="M5 12h14M12 5v14"/>
+                    </svg>
+                </div>
+
+                <h3>Simple</h3>
+
+                <p>
+                    Browsing services and reserving an appointment should feel clear and easy.
+                </p>
+
+            </div>
+
+
+            <div class="aarav-ap-value-card">
+
+                <div class="aarav-ap-value-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                        <path d="M12 3 14 8l5 .5-4 3.4 1.3 5.1L12 14l-4.3 3 1.3-5.1-4-3.4L10 8l2-5z"/>
+                    </svg>
+                </div>
+
+                <h3>Polished</h3>
+
+                <p>
+                    The details matter, from the website experience to the way each service is presented.
+                </p>
+
+            </div>
+
+
+            <div class="aarav-ap-value-card">
+
+                <div class="aarav-ap-value-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                        <circle cx="12" cy="12" r="8"/>
+                        <path d="m8 12 2.5 2.5L16 9"/>
+                    </svg>
+                </div>
+
+                <h3>Comfortable</h3>
+
+                <p>
+                    The overall experience should feel welcoming, calm and easy to return to.
+                </p>
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- EXPERIENCE -->
+<section class="aarav-ap-experience">
+
+    <div class="aarav-ap-wrap aarav-ap-experience-grid">
+
+
+        <div class="aarav-ap-experience-image">
+
+            <img
+                src="https://images.unsplash.com/photo-1600948836101-f9ffda59d250?fit=crop&w=1200&q=87"
+                alt="Modern beauty salon interior"
+                loading="lazy">
+
+        </div>
+
+
+        <div>
+
+            <div class="aarav-ap-eyebrow">
+                The Aarav Beauty experience
+            </div>
+
+            <h2 class="aarav-ap-title">
+                Calm before you even walk through the door.
+            </h2>
+
+            <p class="aarav-ap-copy">
+                The experience starts online. The site is designed to help you quickly understand
+                what is available, choose the right direction and reserve your visit without unnecessary steps.
+            </p>
+
+
+            <div class="aarav-ap-experience-list">
+
+
+                <div class="aarav-ap-experience-item">
+
+                    <div class="aarav-ap-experience-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                            <path d="m5 12 4 4L19 6"/>
+                        </svg>
+                    </div>
+
+                    <div>
+                        <strong>Clear service categories</strong>
+                        <span>Hair, Beauty and Wellness are organised so you can browse quickly.</span>
+                    </div>
+
+                </div>
+
+
+                <div class="aarav-ap-experience-item">
+
+                    <div class="aarav-ap-experience-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                            <rect x="4" y="5" width="16" height="15" rx="2"/>
+                            <path d="M8 3v4M16 3v4M4 10h16"/>
+                        </svg>
+                    </div>
+
+                    <div>
+                        <strong>Easy appointment flow</strong>
+                        <span>Move from choosing a service to reserving your time in a few simple steps.</span>
+                    </div>
+
+                </div>
+
+
+                <div class="aarav-ap-experience-item">
+
+                    <div class="aarav-ap-experience-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                            <path d="M12 21s-7-4.4-7-10a4 4 0 0 1 7-2.7A4 4 0 0 1 19 11c0 5.6-7 10-7 10z"/>
+                        </svg>
+                    </div>
+
+                    <div>
+                        <strong>Personal care first</strong>
+                        <span>The experience stays focused on comfort, clarity and your needs.</span>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+            <a href="/services/" class="aarav-ap-btn aarav-ap-btn-rose">
+                Explore Services
+            </a>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- BRAND MOOD -->
+<section class="aarav-ap-mood">
+
+    <div class="aarav-ap-wrap">
+
+        <div class="aarav-ap-mood-head">
+
+            <div class="aarav-ap-eyebrow">
+                The mood
+            </div>
+
+            <h2 class="aarav-ap-title">
+                Modern, warm and quietly luxurious.
+            </h2>
+
+            <p class="aarav-ap-copy">
+                Aarav Beauty is not about loud luxury. The visual identity is designed to feel softer:
+                warm neutrals, gold details, beauty-led imagery and a sense of calm.
+            </p>
+
+        </div>
+
+
+        <div class="aarav-ap-mood-grid">
+
+
+            <div class="aarav-ap-mood-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1560066984-138dadb4c035?fit=crop&w=1200&q=87"
+                    alt="Elegant salon interior"
+                    loading="lazy">
+
+                <div class="aarav-ap-mood-overlay">
+
+                    <h3>A space that feels considered</h3>
+
+                    <p>
+                        Clean lines, softer tones and a modern salon atmosphere without feeling cold.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="aarav-ap-mood-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?fit=crop&w=900&q=87"
+                    alt="Beauty styling and care"
+                    loading="lazy">
+
+                <div class="aarav-ap-mood-overlay">
+
+                    <h3>Beauty that feels human</h3>
+
+                    <p>
+                        The focus stays on personal care, confidence and feeling comfortable in your own style.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- PROMISE -->
+<section class="aarav-ap-promise">
+
+    <div class="aarav-ap-wrap aarav-ap-promise-grid">
+
+
+        <div class="aarav-ap-promise-number" aria-label="Aarav Beauty monogram">
+            A
+        </div>
+
+
+        <div class="aarav-ap-promise-copy">
+
+            <div class="aarav-ap-eyebrow">
+                Our promise
+            </div>
+
+            <h2 class="aarav-ap-title">
+                Keep it personal. Keep it simple.
+            </h2>
+
+            <p>
+                Aarav Beauty is designed around a straightforward approach to personal care:
+                make services easy to understand, make appointments easy to arrange and keep
+                the overall experience warm, polished and comfortable.
+            </p>
+
+
+            <div class="aarav-ap-promise-points">
+
+                <span class="aarav-ap-promise-point">
+                    Personal
+                </span>
+
+                <span class="aarav-ap-promise-point">
+                    Simple
+                </span>
+
+                <span class="aarav-ap-promise-point">
+                    Polished
+                </span>
+
+                <span class="aarav-ap-promise-point">
+                    Comfortable
+                </span>
+
+            </div>
+
+
+            <a href="/contact/" class="aarav-ap-btn aarav-ap-btn-outline">
+                Contact Aarav Beauty
+            </a>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- CTA -->
+<section class="aarav-ap-cta">
+
+    <div class="aarav-ap-wrap">
+
+
+        <div class="aarav-ap-cta-shell">
+
+            <div>
+
+                <div class="aarav-ap-eyebrow">
+                    Your next visit
+                </div>
+
+                <h2 class="aarav-ap-title">
+                    Ready to explore Aarav Beauty?
+                </h2>
+
+                <p class="aarav-ap-copy">
+                    Browse the services or reserve your appointment when you are ready.
+                </p>
+
+            </div>
+
+
+            <div class="aarav-ap-cta-actions">
+
+                <a href="/services/" class="aarav-ap-btn aarav-ap-btn-outline">
+                    View Services
+                </a>
+
+                <a href="/book-appointment/" class="aarav-ap-btn aarav-ap-btn-dark">
+                    Book Appointment
+                </a>
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+</div>
+<!-- /wp:html -->
